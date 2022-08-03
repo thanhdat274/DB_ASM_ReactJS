@@ -6,7 +6,8 @@ import { isAdmin, isAuth, requiredSignin } from '../middlewares/checkAuth';
 const productRouter = express.Router();
 
 productRouter.get('/products', ListProduct)
-productRouter.post('/products/:userId', requiredSignin, isAuth, isAdmin, AddProduct)
+// productRouter.post('/products/:userId', requiredSignin, isAuth, isAdmin, AddProduct)
+productRouter.post('/products', AddProduct)
 productRouter.get('/products/:id', ListProductDetail)
 productRouter.delete('/products/:id', DeleteProduct)
 productRouter.put('/products/:id', UpdateProduct)
