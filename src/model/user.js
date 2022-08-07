@@ -19,7 +19,7 @@ const userSchema = new Schema({
         type: String,
         default: ""
     },
-    img: {
+    image: {
         type: String,
         default: ""
     },
@@ -48,7 +48,7 @@ userSchema.methods = {
     }
 }
 
-userSchema.pre('save', function(next) {
+userSchema.pre('save', function (next) {
     try {
         this.password = this.encrytPassword(this.password);
         next()
