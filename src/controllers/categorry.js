@@ -12,9 +12,9 @@ export const ListCategory = async (req, res) => {
 export const ListCategoryAndProduct = async (request, response) => {
     try {
         if (request.query._embed) {
-            const categoryId = await Category.findOne({ _id: request.params.id }).exec()
-            const product = await Product.find({ categoryId }).populate('categoryId').exec()
-            response.json({ categoryId, product })
+            const cateId = await Category.findOne({ _id: request.params.id }).exec()
+            const product = await Product.find({ cateId }).populate('cateId').exec()
+            response.json({ cateId, product })
         } else {
             const cate = await Category.findOne({ _id: request.params.id }).exec()
             response.json(cate)
