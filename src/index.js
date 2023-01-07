@@ -17,10 +17,10 @@ app.use("/api", AuthRouter);
 
 
 mongoose.connect('mongodb://127.0.0.1:27017/DB_ASM_ReactJS')
-.then(() => console.log("Kết nối với Database thành công"))
-.catch(err => console.log("Kết nối với Database không thành công"))
+    .then(() => console.log("Kết nối với Database thành công"))
+    .catch(err => console.log("Kết nối với Database không thành công"))
 
-const port = 8080;
+const port = 8800;
 app.listen(port, () => {
     console.log(`Server is running on ${port}`);
 })
