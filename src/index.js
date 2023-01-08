@@ -1,10 +1,10 @@
 import express from 'express';
 import cors from 'cors'
-import homeRouter from "./src/routers/home"
-import productRouter from "./src/routers/product"
+import homeRouter from "./routers/home"
+import productRouter from "./routers/product"
 import mongoose from 'mongoose';
-import cateRouter from './src/routers/category';
-import AuthRouter from './src/routers/user';
+import cateRouter from './routers/category';
+import AuthRouter from './routers/user';
 
 const app = express();
 
